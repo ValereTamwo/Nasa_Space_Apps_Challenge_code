@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { Route, Routes, BrowserRouter} from 'react-router-dom';
+import GlobalDataPage from './pages/Global';
+import Home from './pages/Home';
+import GlobalMap3D from './pages/MapGl';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+     
+        <Routes>
+          <Route path="/global-data" element={<GlobalDataPage />} />
+          <Route path="/local-cases" element={<>hello2</>} />
+          <Route path="/proposed-solutions" element={<>Hello</>} />
+          <Route path="/interactive-maps" element={<GlobalMap3D/>} />
+          <Route path="/ai-chatbot" element={<>Hello chat</>} />
+          
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+   
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
