@@ -34,7 +34,7 @@ const ScatterPlot3D = ({ selectedContinent, selectedSocialIndex, selectedDisaste
           const points = filteredData.map((item) => {
             const x = item[selectedSocialIndex]; // X axis
             const y = item['Gender Inequality Index']; // Y axis
-            const z = Math.random() * 10; // Random Z axis value
+            const z = item[selectedDisasterType]; // Random Z axis value
 
             return {
               position: [x, y, z],
