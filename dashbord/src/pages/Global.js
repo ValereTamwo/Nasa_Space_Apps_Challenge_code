@@ -227,12 +227,13 @@ const DashboardHeader = () => {
         
       
       </div>
-        <ScatterPlot3D 
+       
+      </div>
+       <ScatterPlot3D 
           selectedContinent={selectedContinent} 
           selectedSocialIndex={selectedSocioEconomic}  
           selectedDisasterType={selectedNationalDisasterMetric} 
         />
-      </div>
       </div>
   );
 };
