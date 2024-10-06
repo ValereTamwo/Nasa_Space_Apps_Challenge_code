@@ -47,9 +47,9 @@ const ScatterPlot3D = ({ selectedContinent, selectedSocialIndex, selectedDisaste
   }, [selectedContinent, selectedSocialIndex, selectedDisasterType]);
 
     return (
-        <div className='mt-8 w-1/5 bg-gray-900 top-[25px]'>
+        <div className='mt-8 w-full h-[100vh] bg-gray-900 top-[25px]'>
             <h3 className='text-white p-3 w-[400px]' >{selectedSocialIndex} vs Gender Inequality Index vs{selectedDisasterType} </h3>
-    <Canvas style={{ height: '100%',width:'400px', background: 'skyblue' }}>
+    <Canvas style={{ height: '100%',width:'100%', background: 'skyblue' }}>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
       <OrbitControls />
